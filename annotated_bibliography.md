@@ -13,3 +13,24 @@ They show how they scale from the 100% base scenario to the 10% without describi
 Helpful graphics include the passenger waiting times during time of day, the productivity of the vehicles during time of day, and spatial distribution of waiting times and empty rides.
 
 They found 10% of transit riders switched to autonomous taxis (only measured on the city center model, no outskirts). No explanation was given.
+
+## Simulation of city-wide replacement of private cars with autonomous taxis in Berlin (Joschka Bischoff, Michal Maciejewski, 2016)
+Goal is to find optimum number of autonomous taxis (ATs) to service the city of Berlin, by replacing the private cars. They came up with 100,000 (not sure how exactly)
+
+Details include the dispatching strategy using the demand-supply balancing strategy, _undersupply_ and _oversupply_.
+
+I think the dispatch algorithm should include a buffer distance around the request. The model should be seen from the customer's perspective.
+
+Data not supported...
+- The split of car and public transit.
+- Section 3.2, certain adaptations pertaining to shortest path search...
+- What are taxi ranks (section 4)
+- 4.2, the graphs all look the same, and they don't talk about why 100,000 vehicles were chosen. "It was a good compromise..."
+- 4.3 the Replacement ratio... is it 1:10 or 1:12?
+- 4.3.2 where did they get the 40 min utilization of CDVs?
+- Conclusion, total drive time? what is it?
+
+## Help
+I need to figure out the ```.bib``` file.
+
+I also need to actually write an abstract.
