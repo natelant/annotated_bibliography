@@ -1,17 +1,24 @@
 ---
-title: Annotated Bibliography
-author: Nate Lant
-bibliography: bibliography.bib
+title: "Annotated Bibliography"
+author: "Nate Lant"
 output: pdf_document
+bibliography: bibliography.bib
 ---
-```{r}
+```{r setup, include=FALSE}
 biblio <- bibtex::read.bib("bibliography.bib")
+knitr::opts_chunk$set(echo = TRUE)
 ```
 
-So far this is just notes on what I've read until I can format this correctly and get the ```.bib``` file working.
+# Microsimulation
+Buzz words: multi-agent, microsimulation model, on-demand, agent-based, carpooling, travel demand/supply estimation, taxi fleets, demand-responsive transportation, case study,
 
-## Berlin Taxis
+## Autonomous Taxicabs in Berlin – A Spatiotemporal Analysis of Service Performance
 `r capture.output(print(biblio["BischoffJ2016"]))`
+
+### Abstract
+
+
+### Notes
 
 They tested the effect on traffic from empty cars and demand shift as people switch from public transit.
 
@@ -21,7 +28,15 @@ Helpful graphics include the passenger waiting times during time of day, the pro
 
 They found 10% of transit riders switched to autonomous taxis (only measured on the city center model, no outskirts). No explanation was given.
 
-## Simulation of city-wide replacement of private cars with autonomous taxis in Berlin (Joschka Bischoff, Michal Maciejewski, 2016)
+
+
+
+## Simulation of city-wide replacement of private cars with autonomous taxis in Berlin 
+`r capture.output(print(biblio["Bischoff2016"]))`
+
+### Abstract
+
+### Notes
 Goal is to find optimum number of autonomous taxis (ATs) to service the city of Berlin, by replacing the private cars. They came up with 100,000 (not sure how exactly)
 
 Details include the dispatching strategy using the demand-supply balancing strategy, _undersupply_ and _oversupply_.
@@ -37,9 +52,305 @@ Data not supported...
 - 4.3.2 where did they get the 40 min utilization of CDVs?
 - Conclusion, total drive time? what is it?
 
-## Help
-I need to figure out the ```.bib``` file.
+## Simulating a rich ride-share mobility service using agent-based models
+`r capture.output(print(biblio["Segui-Gasco2019"]))`
 
-I also need to actually write an abstract.
+### Abstract
+In the UK, and using the National Trip End Model (NTEM), they produced a set of O-D matrices and then integrated them into MATSim. MATSim was used to predict the changes in travel behavior (specifically mode shift) and predict the effect on traffic conditions due to new AMoD services for the year 2025. As part of their agent-based framework, the Value of Time changes depending on the purpose of each trips and the income of the traveler.
 
-# References
+MATSim is used to calculate the service demand, however, neither the occupancy of each vehicle and waiting/detour time were known. Average values were used and held constant (IMSim could have precisely calculated those values, but it would have taken a lot of time...).
+
+MATSim informs the IMSim about the network conditions (travel times) and origins and destinations. With this input, IMSims calculates the optimum routes for the AMoD fleet, while simultaneously tracking the waiting and detour times that each agent experiences. "This information" (not exactly sure what is included here) is reported back to MATSim which updates the perception score of the agents and the Passenger Car Unit factor.
+
+Then they calibrate it to the MERGE Greenwich case study in London.
+
+### Notes
+In London, using MATSim (demand simulation model) coupled with IMSim (Intelligent mobility simulator)
+
+Includes a literature review that describes several authors' efforts.
+
+OD trips had to be disaggregated? What does that mean? Each trip was assigned information regarding the purpose, departure time, and initial mode of transport before the introduction of AV ride-sharing. The Value of Time (VoT) for each trip was also included together with demographic characteristics.
+
+the original transport demand derives from a trip-based model, no information can be extracted regarding the sequence of activities (trip-chaining). Instead, all plans were expressed as two activities: one at the origin and one at the destination, linked by an intermediate trip.
+
+
+## Microsimulation of Demand and Supply of Autonomous Mobility On Demand
+`r capture.output(print(biblio["Azevedo2016"]))`
+
+### Abstract
+Using SimMobility, they integrate mobility sensitive behavioral models in a multiple time-scale structure. They look at three simulation levels a) long-term, b) a midterm level, and c) a short-term level.
+
+### Notes
+Professors from the MIT-Singapore alliance. 
+
+
+## TaxiSim: A Multiagent Simulation Platform for Evaluating Taxi Fleet Operations
+`r capture.output(print(biblio["Cheng2011"]))`
+
+### Abstract
+They *build* a multi-agent-base simulation platform, TaxiSim.
+
+### Notes
+"Despite all these efforts in building computer simulations
+for a wide range of studies, to the best of our knowledge, we cannot find any simulation platform that is capable of modeling realistic taxi fleet operations. Taxi fleet operation is special and cannot be modeled straightforwardly by using existing technologies for the following reasons: [Taxi drivers make decisions "selfishly" and taxi drivers act unpredictably after they drop off a customer.]"
+
+
+## Output variability caused by random seeds in a multi-agent transport simulation model
+`r capture.output(print(biblio["Paulsen2018"]))`
+
+### Abstract
+In this study they analyse the output variability caused by random seeds of a multi-agent transport simulator (MATSim) when applied to a case study of Santiago, Chile.
+
+### Notes
+
+
+## A Critical Analysis of Travel Demand Estimation for New One-Way Carsharing Systems
+`r capture.output(print(biblio["Vosooghi2017"]))`
+
+### Abstract
+This paper discusses the methods, paradigms, toolkits and platforms used by other researchers for the demand estimation of one-way carsharing systems. It is a collection of information. 
+
+### Notes
+Probably more helpful to learn from than to cite.
+
+Includes an informative table with summary of studies on travel demand estimation for one-way carsharing systems (includes Axhausen, Ciari, Balac, Fagnant, and Horl - all using MATSim)
+
+
+## An Assignment-Based Approach to Efficient Real-Time City-Scale Taxi Dispatching
+`r capture.output(print(biblio["Maciejewski2016"]))`
+
+### Abstract
+
+
+### Notes
+They evaluate dispatching strategies in detail in the city of Berlin and the neighboring region of Brandenburg using the microscopic large-scale MATSim simulator.
+
+## Carsharing demand estimation Zurich, Switzerland, area case study
+`r capture.output(print(biblio["Balac"]))`
+
+### Abstract
+
+
+### Notes
+
+
+## The Philippines: Agent-Based Transport Simulation Model for Disaster Response Vehicles
+`r capture.output(print(biblio["Yaneza2016"]))`
+
+### Abstract
+
+
+### Notes
+
+
+## USING PASSIVE DATA TO BUILD AN AGILE TOUR-BASED MODEL: A CASE STUDY IN ASHEVILLE
+`r capture.output(print(biblio["Kressner"]))`
+
+### Abstract
+
+
+### Notes
+
+
+## Validating and calibrating agent-based models: A case study
+`r capture.output(print(biblio["Bianchi2007"]))`
+
+### Abstract
+
+
+### Notes
+What are ad hoc perameter values?
+
+Uses the complex adaptive trivial system (CATS) model - this means
+
+Italian professors (various universities). There are some grammatical errors.
+
+
+## Multi-agent simulation for planning and designing new shared mobility services
+`r capture.output(print(biblio["Inturri2019"]))`
+
+### Abstract
+They use an agent-based model to explore different system configurations of flexible transit (a specific demand responsive shared transport service) to estimate demand and supply in the city of Ragusa, Italy. They aim to use GIS based demand and road network models, explore dispatching strategies, find indicators to monitor efficiency. They identify an optimal range of operational vehicles.
+
+### Notes
+
+
+## Agent-based simulation testbed for on-demand mobility services
+`r capture.output(print(biblio["Certicky2014"]))`
+
+### Abstract
+
+
+### Notes
+The simulation testbed is built on the versatile transport simulation framework AgentPolis.
+
+
+## Effects of scaling down the population for agent-based traffic simulations
+`r capture.output(print(biblio["Llorca2019"]))`
+
+### Abstract
+Scaling down large populations is required because of runtime. In Munich 5% of agents and 50 iterations produced similar travel time distributions to the 100% of agents and 500 iterations (but 50 times faster). The researchers compared runtime, average travel time, and travel time distribution.
+
+### Notes
+Using MATSim and carried out in the Munich metropolitan area.
+
+
+## Heterogeneous tolls and values of time in multi-agent transport simulation
+`r capture.output(print(biblio["Nagel2014"]))`
+
+### Abstract
+
+
+### Notes
+
+
+## Simulating ad-hoc demand-responsive transportation: a comparison of three approaches
+`r capture.output(print(biblio["Ronald2017"]))`
+
+### Abstract
+The three approaches are 1) a simple custom-developed package, 2) traffic microsimulation, and 3) agent-based simulation. Each approach is used to analyze the advantages and disadvantages in evaluating for demand-responsive transportation.
+
+### Notes
+Researchers from University of Melbourne
+
+## DYNAMIC RIDE-SHARING AND FLEET SIZING FOR A SYSTEM OF SHARED 1 AUTONOMOUS VEHICLES IN AUSTIN, TEXAS 2 3 4
+`r capture.output(print(biblio["Fagnant"]))`
+
+### Abstract
+
+
+### Notes
+
+
+## Simulating Demand-responsive Transportation: A Review of Agent-based Approaches
+`r capture.output(print(biblio["Ronald2015"]))`
+
+### Abstract
+
+
+### Notes
+
+
+## A Conceptual Design of an Agent-based Interaction Model for the Carpooling Application
+`r capture.output(print(biblio["Cho2012"]))`
+
+### Abstract
+
+
+### Notes
+(PDF is linked to a dial-a-ride paper by Fu)
+
+
+## Simulation model of carpooling with the Janus Multiagent platform
+`r capture.output(print(biblio["Galland2013"]))`
+
+### Abstract
+
+
+### Notes
+
+
+## A modeling system for simulation of dial-a-ride services
+`r capture.output(print(biblio["Hall2012"]))`
+
+### Abstract
+
+
+### Notes
+
+
+## Estimating Activity and Health Impacts of First and Last Mile Transit Access Programs for Work and Shopping Trips Using Sharing Mobility Services in the Metropolitan Area Center for Transportation, Environment, and Community Health Final Report
+`r capture.output(print(biblio["Jaller2019"]))`
+
+### Abstract
+
+
+### Notes
+
+
+## Dynamic Transport Services
+`r capture.output(print(biblio["Axhausen2016"]))`
+
+### Abstract
+
+
+### Notes
+
+
+## Large-scale agent-based transport simulation in shanghai, china
+`r capture.output(print(biblio["Zhang2013"]))`
+
+### Abstract
+
+
+### Notes
+
+
+## The MATSim Open Berlin Scenario: A multimodal agent-based transport simulation scenario based on synthetic demand modeling and open data
+`r capture.output(print(biblio["Ziemke2019"]))`
+
+### Abstract
+
+
+### Notes
+
+
+<!-- new section ------------------------------------------------------------------------------------------------------------------------->
+
+# Mobility for the Disabled
+Buzz words: 
+
+## TNCs and Disbled Access - SFMTA
+
+
+
+## California SB 1376
+
+
+
+## New York State Transportation Newtork Company Accessibility Task Force
+
+
+
+## Travel Patterns of American Adults with Disabilities
+
+### Abstract
+This paper briefly covers employment, vehicle ownership, trip purpose, mode choice, trip distance, travel times, trip substitutes,
+
+### Notes
+The NHTS asks respondents if they have “a
+temporary or permanent condition or handicap
+that makes it difficult to travel outside of the
+home.” If they respond yes, the NHTS asks followup questions about the mobility devices they use,
+such as canes or wheelchairs. It also asks follow-up
+questions about how the condition affects their
+travel—for example, by limiting their driving to
+daytime.
+Some respondents have disabilities that might
+not limit travel, but the NHTS asks only about
+“travel-limiting disabilities.” 
+
+Over half (57.8 percent) of all respondents with disabilities use one or more medical devices:
+
+Walking canes (36.7 percent)
+Walkers (22.9 percent)
+Wheelchairs (11.6 percent)
+Motorized scooters (4.4 percent)
+Motorized wheelchairs (3.9 percent)
+Crutches (2.6 percent)
+White canes for visual impairments (1.3 percent)
+Seeing-eye dogs (1.1 percent)
+
+Over one-third (36.5 percent) of people with disabilities who made zero trips say that they stayed home because they have disabilities or are housebound.
+
+Most ride-hailing services use applications on smartphones or tablets. People with disabilities use these devices less often than people without disabilities. Over four-fifths (86.5 percent) of people without disabilities use a smartphone daily versus 66.5 percent for people with disabilities.
+
+
+
+
+
+
+
+
+
+
