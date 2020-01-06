@@ -353,6 +353,29 @@ Most ride-hailing services use applications on smartphones or tablets. People wi
 
 
 
+## The impacts of limited transportation access on persons with disabilities' social participation
+`r capture.output(print(biblio["Bascom2017"]))`
+
+### Abstract
+
+
+### Notes
+(Graydon W. Bascom, Keith M. Christensen)
+The overall goal of the research was to see how social life was impacted by limited transportation because of a disability. They looked at the strength of the social network of each individual.
+They also looked at what modes were being used and if modes were associated with age, gender, race, income, employment, type of disability, and education.
+
+Nearly 70% of individuals with disabilities reported that their social life was hindered by transportation needs. And social networks affected mode choice.
+
+##### Demographics
+Results seem slightly different from the NHTS research that I did. According to their survey (they also included 2014 census data) less than 28.4% made less than $15,000 per year, over 47.6% of respondents were employed (very different from the 2017 NHTS).
+
+##### Mode
+They show mode distribution by disability type (including taxi and paratransit) and compare the distribution to the 2003 BTS survey.
+In the one-way ANOVA test they found that income and disability type were significantly associated with mode choice and that race, age, education and employment were not.
+About 32% of people with disabilities utilize a private vehicle (about half of the number reported by the 2003 BTS). Public transportation and paratransit use were also reported higher than in the 2003 BTS survey results.
+
+
+
 
 
 
