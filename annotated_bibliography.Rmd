@@ -375,9 +375,22 @@ In the one-way ANOVA test they found that income and disability type were signif
 About 32% of people with disabilities utilize a private vehicle (about half of the number reported by the 2003 BTS). Public transportation and paratransit use were also reported higher than in the 2003 BTS survey results.
 
 
+## Paratransit demand of disabled people
+`r capture.output(print(biblio["Bearse2004"]))`
 
+### Abstract
+This paper shows how demand for paratransit ridership has increased over time. The main goal is to take the JAUNT administrative records and calculate the demand growth per passenger. They found that the mean number of trips per month of those eligible for the service was 3.11 trips. That number includes a lot of people that took zero trips, so including only those who took at least one trip in the month, the mean number of trips was 10.64
 
+### Notes
+This paper is limited by the data collected in the early 1990s and by the Virginia region. Data was primarily taken from the JAUNT paratransit system in Virginia. This service is similar to the service in Salt Lake City in that the riders have to be eligible for the service and request a ride at least 24 hours in advance.
 
+This image shows the  distribution of users and how many trips they take."For example, 53% of trips are taken by people who take 20 trips or fewer per month. This figure implies that 47% of JAUNT trips are taken by 7% of the users."
+
+![Caption for the picture.](images/bearse_people_trips_distribution.JPG)
+
+The Charlottesvill Transit System manages the eligibility process for Charlottesville users of JAUNT. The figure below shows the growth since 1984 by number of eligible JAUNT users.
+
+![Caption for the picture.](images/bearse_lapsed_population_growth.JPG)
 
 
 
