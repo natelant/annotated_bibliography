@@ -1,7 +1,9 @@
 ---
 title: "Annotated Bibliography"
 author: "Nate Lant"
-output: pdf_document
+output:
+  html_document:
+    df_print: paged
 bibliography: bibliography.bib
 ---
 ```{r setup, include=FALSE}
@@ -338,7 +340,7 @@ Researchers from University of Melbourne
 ### Notes
 
 
-<!-- new section ------------------------------------------------------------------------------------------------------------------------->
+<!-- new section ---------------------------------------------------------------------------------------->
 
 # Mobility for the Disabled
 Buzz words: 
@@ -492,3 +494,12 @@ not prioritized.
 ### Conclusions
 With 250 WAV vehicles (well below 5% of the city's active vehicle fleet) an estimated wait time of 
 12:22 minues is acheived.
+
+# UDOT Report References (Additional)
+`r capture.output(print(biblio["Rosenbloom2002"]))`
+
+
+`r capture.output(print(biblio["Oberlink2006"]))`
+
+`r capture.output(print(biblio["Velho2016"]))`
+
