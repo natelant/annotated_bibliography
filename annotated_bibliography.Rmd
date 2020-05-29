@@ -493,7 +493,7 @@ not prioritized.
 
 ### Conclusions
 With 250 WAV vehicles (well below 5% of the city's active vehicle fleet) an estimated wait time of 
-12:22 minues is acheived.
+12:22 minutes is achieved.
 
 # UDOT Report References (Additional)
 `r capture.output(print(biblio["Rosenbloom2002"]))`
@@ -502,4 +502,27 @@ With 250 WAV vehicles (well below 5% of the city's active vehicle fleet) an esti
 `r capture.output(print(biblio["Oberlink2006"]))`
 
 `r capture.output(print(biblio["Velho2016"]))`
+
+## Enhancing the Safety of Visually Impaired Travelers in and around Transit Stations
+`r capture.output(print(biblio["Jonnalagedda2014"]))`
+
+## Quality of Life Transpor tation The State of Personal Technology:
+`r capture.output(print(biblio["VanRoosmalen2010"]))`
+
+## The value and acceptance of citizen science to promote transit accessibility
+`r capture.output(print(biblio[""]))`
+
+
+`r capture.output(print(biblio[""]))`
+
+
+`r capture.output(print(biblio[""]))`
+
+
+
+`r capture.output(print(biblio[""]))`
+
+
+
+`r capture.output(print(biblio[""]))`
 
